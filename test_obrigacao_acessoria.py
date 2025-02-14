@@ -33,7 +33,6 @@ def test_create_obrigacao(client):
     assert response.json()["nome"] == "Obrigação Teste"
     assert response.json()["empresa_id"] == empresa_id
     delete_empresa = client.delete(f"/empresas/{empresa_id}")
-    delete_response = client.delete(f"/obrigacao-acessoria/{obrigacao_id}")
 
 
 def test_list_obrigacoes(client):
@@ -69,7 +68,6 @@ def test_get_obrigacao_by_id(client):
     assert response.json()["id"] == obrigacao_id
     delete_empresa = client.delete(f"/empresas/{empresa_id}")
 
-    delete_response = client.delete(f"/obrigacao-acessoria/{obrigacao_id}")
 
 
 def test_delete_obrigacao(client):
