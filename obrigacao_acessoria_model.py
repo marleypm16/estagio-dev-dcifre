@@ -8,6 +8,6 @@ class ObrigacaoAcessoria(Base):
     id = Column(Integer, primary_key=True,index=True)
     nome = Column(String)
     periodicidade = Column(String)
-    empresa_id= Column(Integer, ForeignKey('empresa.id'))
+    empresa_id= Column(Integer, ForeignKey('empresa.id',ondelete="CASCADE"))
     empresa = relationship("Empresa", back_populates="obrigacoes")
 
