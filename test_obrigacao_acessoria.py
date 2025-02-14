@@ -33,6 +33,7 @@ def test_create_obrigacao(client):
     assert response.json()["nome"] == "Obrigação Teste"
     assert response.json()["empresa_id"] == empresa_id
     delete_empresa = client.delete(f"/empresas/{empresa_id}")
+    assert delete_empresa.status_code == 204
 
 
 def test_list_obrigacoes(client):
@@ -67,6 +68,7 @@ def test_get_obrigacao_by_id(client):
     assert response.status_code == 200
     assert response.json()["id"] == obrigacao_id
     delete_empresa = client.delete(f"/empresas/{empresa_id}")
+    assert delete_empresa.status_code == 204
 
 
 
@@ -99,3 +101,4 @@ def test_delete_obrigacao(client):
     get_response = client.get(f"/obrigacao-acessoria/{obrigacao_id}")
     assert get_response.status_code == 404
     delete_empresa = client.delete(f"/empresas/{empresa_id}")
+    assert delete_empresa.status_code == 204
