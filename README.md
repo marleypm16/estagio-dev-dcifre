@@ -34,12 +34,18 @@ database_url= url do banco de dados
 ```
 
 ### 4️⃣ Criar as Tabelas no Banco de Dados
- execute:
+Execute:
 ```bash
 python migrate.py
 ```
 
-## 🔧 Endpoints Disponíveis
+### 5️⃣ Iniciar o Projeto
+Execute:
+```bash
+fastapi dev main.py
+```
+
+## 🛠 Endpoints Disponíveis
 A documentação interativa pode ser acessada em **`http://127.0.0.1:8000/docs`**.
 
 ### 🏢 Empresas
@@ -51,7 +57,7 @@ A documentação interativa pode ser acessada em **`http://127.0.0.1:8000/docs`*
 | `PUT`   | `/empresas/{id}` | Atualizar uma empresa |
 | `DELETE` | `/empresas/{id}` | Remover uma empresa |
 
-### 📜 Obrigações Acessórias
+### 📝 Obrigações Acessórias
 | Método  | Rota                    | Descrição |
 |---------|--------------------------|-------------|
 | `POST`  | `/obrigacoes/`          | Criar uma obrigação |
