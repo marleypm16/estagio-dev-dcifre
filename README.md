@@ -1,6 +1,6 @@
-# 📌 API de Gestão de Empresas e Obrigações Acessórias
+#  API de Gestão de Empresas e Obrigações Acessórias
 
-## 📖 Sobre o Projeto
+##  Sobre o Projeto
 Esta API foi desenvolvida utilizando **FastAPI**, **SQLAlchemy** e **PostgreSQL** para gerenciar **empresas** e suas respectivas **obrigações acessórias**. Ela permite o cadastro, listagem, atualização e remoção dessas entidades, garantindo um gerenciamento eficiente.
 
 ## 🚀 Tecnologias Utilizadas
@@ -9,7 +9,6 @@ Esta API foi desenvolvida utilizando **FastAPI**, **SQLAlchemy** e **PostgreSQL*
 - **SQLAlchemy** (ORM para banco de dados)
 - **PostgreSQL** (Banco de dados relacional)
 - **Pydantic** (Validação de dados)
-- **Alembic** (Migrações do banco de dados)
 - **Pytest** (Testes automatizados)
 
 ## ⚙️ Como Configurar o Ambiente
@@ -35,9 +34,9 @@ database_url= url do banco de dados
 ```
 
 ### 4️⃣ Criar as Tabelas no Banco de Dados
-Se estiver usando **Alembic**, execute:
+ execute:
 ```bash
-alembic upgrade head
+python migrate.py
 ```
 
 ## 🔧 Endpoints Disponíveis
