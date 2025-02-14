@@ -19,13 +19,13 @@ def create_empresa(empresa: EmpresaCreate, db: Session = Depends(connect_db)):
 
 @router.get("/", response_model=List[Empresa], status_code=200, summary="Listar todas as empresas",
             description="Retorna uma lista de todas as empresas cadastradas no banco de dados.")
-def list_empresas(db: Session = Depends(connect_db)):
+def get_empresas(db: Session = Depends(connect_db)):
     service = EmpresaService(db)
     return service.get_empresas()
 
 @router.get("/{empresa_id}", response_model=Empresa, status_code=200, summary="Obter detalhes de uma empresa",
             description="Busca os detalhes de uma empresa pelo seu ID.")
-def list_obrigacao_by_id(empresa_id: int, db: Session = Depends(connect_db)):
+def get_empresa_by_id(empresa_id: int, db: Session = Depends(connect_db)):
 
     service = EmpresaService(db)
     db_empresa = service.get_empresa_by_id(empresa_id)
