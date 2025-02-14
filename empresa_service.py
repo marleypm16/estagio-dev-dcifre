@@ -9,7 +9,7 @@ class EmpresaService:
     def get_empresas(self):
         return self.db.query(Empresa).all()
 
-    def get_empresa_id(self,empresa_id: int):
+    def get_empresa_by_id(self,empresa_id: int):
         return self.db.get(Empresa,empresa_id)
 
     def create_empresa(self,empresa: EmpresaCreate):
