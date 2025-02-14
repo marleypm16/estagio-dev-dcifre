@@ -32,7 +32,7 @@ class ObrigacaoAcessoriaService:
         obrigacao =self.db.get(ObrigacaoAcessoria,obrigacao_acessoria_id)
 
         obrigacao.nome = obrigacao_update.nome
-        obrigacao.periodicidade = obrigacao_update.periodicidade
+        obrigacao.periodicidade = obrigacao_update.periodicidade.lower()
         obrigacao.empresa_id = obrigacao_update.empresa_id
         self.db.commit()
         self.db.refresh(obrigacao)
