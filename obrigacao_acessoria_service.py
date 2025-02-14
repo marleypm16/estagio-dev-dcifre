@@ -6,17 +6,17 @@ class ObrigacaoAcessoriaService:
     def __init__(self, db:Session):
         self.db = db
 
-    def listar_obrigacao(self):
+    def get_obrigacao(self):
         return self.db.query(ObrigacaoAcessoria).all()
 
 
-    def listar_obrigacao_id(self,obrigacao_acessoria_id: int):
+    def get_obrigacao_by_id(self,obrigacao_acessoria_id: int):
         obrigacao = self.db.get(ObrigacaoAcessoria,obrigacao_acessoria_id)
 
         return obrigacao
 
 
-    def criar_obrigacao(self,obrigacao: ObrigacaoAcessoriaCreate):
+    def create_obrigacao(self,obrigacao: ObrigacaoAcessoriaCreate):
         nova_obrigacao = ObrigacaoAcessoria(
             nome=obrigacao.nome,
             periodicidade=obrigacao.periodicidade,
@@ -28,7 +28,7 @@ class ObrigacaoAcessoriaService:
         return nova_obrigacao
 
 
-    def atualizar_obrigacao(self,obrigacao_acessoria_id: int, obrigacao_update: ObrigacaoAcessoriaCreate):
+    def update_obrigacao(self,obrigacao_acessoria_id: int, obrigacao_update: ObrigacaoAcessoriaCreate):
         obrigacao =self.db.get(ObrigacaoAcessoria,obrigacao_acessoria_id)
 
         obrigacao.nome = obrigacao_update.nome
