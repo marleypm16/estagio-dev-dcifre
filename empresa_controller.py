@@ -36,8 +36,11 @@ def get_empresa_by_id(empresa_id: int, db: Session = Depends(connect_db)):
 @router.put("/{empresa_id}", response_model=Empresa, status_code=200, summary="Atualizar uma empresa",
             description="Atualiza os dados de uma empresa existente pelo ID.")
 def update_empresa(empresa_id: int, empresa: EmpresaCreate, db: Session = Depends(connect_db)):
-
     service = EmpresaService(db)
+    db_empresa = service.get_empresa_by_id(empresa_id)
+    if db_empresa is None:
+        raise HTTPException(status_code=404, detail="Empresa não encontrada")
+
     return service.update_empresa(empresa_id, empresa)
 
 @router.delete("/{empresa_id}", status_code=204, summary="Deletar uma empresa",
