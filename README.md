@@ -3,7 +3,7 @@
 ##  Sobre o Projeto
 Esta API foi desenvolvida utilizando **FastAPI**, **SQLAlchemy** e **PostgreSQL** para gerenciar **empresas** e suas respectivas **obrigações acessórias**. Ela permite o cadastro, listagem, atualização e remoção dessas entidades, garantindo um gerenciamento eficiente.
 
-## 🚀 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 - **Python 3.10+**
 - **FastAPI** (Framework para API)
 - **SQLAlchemy** (ORM para banco de dados)
@@ -11,7 +11,7 @@ Esta API foi desenvolvida utilizando **FastAPI**, **SQLAlchemy** e **PostgreSQL*
 - **Pydantic** (Validação de dados)
 - **Pytest** (Testes automatizados)
 
-## ⚙️ Como Configurar o Ambiente
+##  Como Configurar o Ambiente
 
 ### 1️⃣ Clonar o Repositório
 ```bash
