@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
-from sqlalchemy.orm import declarative_base
+from db import Base
+from sqlalchemy.orm import relationship
 
-Base = declarative_base()
 
 class ObrigacaoAcessoria(Base):
     __tablename__ = 'obrigacaoacessoria'
@@ -9,4 +9,5 @@ class ObrigacaoAcessoria(Base):
     nome = Column(String)
     periodicidade = Column(String)
     empresa_id= Column(Integer, ForeignKey('empresa.id'))
+    empresa = relationship("Empresa", back_populates="obrigacoes")
 

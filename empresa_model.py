@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
-from sqlalchemy.orm import declarative_base
+from db import Base
+from sqlalchemy.orm import relationship
 
-Base = declarative_base()
 
 class Empresa(Base):
     __tablename__ = 'empresa'
@@ -11,6 +11,8 @@ class Empresa(Base):
     email = Column(String)
     endereco = Column(String)
     telefone = Column(String)
+    obrigacoes = relationship("ObrigacaoAcessoria", back_populates="empresa")
+
 
 
 
