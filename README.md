@@ -60,16 +60,16 @@ A documentação interativa pode ser acessada em **`http://127.0.0.1:8000/docs`*
 | `PUT`   | `/obrigacoes/{id}`      | Atualizar uma obrigação |
 | `DELETE` | `/obrigacoes/{id}`      | Remover uma obrigação |
 
-## 🧪 Testes Automatizados
+##  Testes Automatizados
 Para rodar os testes unitários:
 ```bash
 pytest test_arquivo_teste.py
 ```
 
-## 📌 Funcionalidades Extras
+##  Funcionalidades Extras
 - **Deleção em Cascata**: Quando uma empresa é deletada, suas obrigações também são removidas automaticamente.
 - **Validações com Pydantic**: Garantia de dados corretos na entrada.
 
-## 📌 Autor
+##  Autor
 - **[Marley](https://github.com/marleypm16/)**
 
