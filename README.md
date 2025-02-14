@@ -16,8 +16,8 @@ Esta API foi desenvolvida utilizando **FastAPI**, **SQLAlchemy** e **PostgreSQL*
 
 ### 1️⃣ Clonar o Repositório
 ```bash
-git clone https://github.com/seuusuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/marleypm16/estagio-dev-dcifre.git
+cd estagio-dev-dcifre
 ```
 
 ### 2️⃣ Criar um Ambiente Virtual e Instalar Dependências
@@ -31,7 +31,7 @@ pip install -r requirements.txt
 ### 3️⃣ Configurar o Banco de Dados
 Crie um arquivo **`.env`** na raiz do projeto com as credenciais do banco:
 ```
-DATABASE_URL=postgresql://usuario:senha@localhost:5432/seu_banco
+database_url= url do banco de dados
 ```
 
 ### 4️⃣ Criar as Tabelas no Banco de Dados
@@ -72,5 +72,5 @@ pytest test_arquivo_teste.py
 - **Validações com Pydantic**: Garantia de dados corretos na entrada.
 
 ## 📌 Autor
-- **[Seu Nome](https://github.com/marleypm16/)**
+- **[Marley](https://github.com/marleypm16/)**
 
