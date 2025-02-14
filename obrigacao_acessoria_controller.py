@@ -10,7 +10,7 @@ router = APIRouter(
     prefix="/obrigacao-acessoria"
 )
 
-@router.post("/", response_model=ObrigacaoAcessoriaCreate, status_code=201,
+@router.post("/", response_model=ObrigacaoAcessoria, status_code=201,
              summary="Criar uma nova obrigação acessória",
              description="Adiciona uma nova obrigação acessória ao banco de dados.")
 def create_obrigacao(obrigacao: ObrigacaoAcessoriaCreate, db: Session = Depends(connect_db)):
@@ -37,7 +37,7 @@ def list_obrigacao_by_id(obrigacao_id: int, db: Session = Depends(connect_db)):
         raise HTTPException(status_code=404, detail="Obrigação não encontrada")
     return db_obrigacao
 
-@router.put("/{obrigacao_id}", response_model=ObrigacaoAcessoriaCreate, status_code=200,
+@router.put("/{obrigacao_id}", response_model=ObrigacaoAcessoria, status_code=200,
             summary="Atualizar uma obrigação acessória",
             description="Atualiza os dados de uma obrigação acessória existente pelo ID.")
 def update_obrigacao(obrigacao_id: int, obrigacao: ObrigacaoAcessoriaCreate, db: Session = Depends(connect_db)):
@@ -45,7 +45,7 @@ def update_obrigacao(obrigacao_id: int, obrigacao: ObrigacaoAcessoriaCreate, db:
     service = ObrigacaoAcessoriaService(db)
     return service.atualizar_obrigacao(obrigacao_id, obrigacao)
 
-@router.delete("/{obrigacao_id}", status_code=200,
+@router.delete("/{obrigacao_id}", status_code=204,
                summary="Deletar uma obrigação acessória",
                description="Remove uma obrigação acessória do banco de dados pelo seu ID.")
 def delete_obrigacao(obrigacao_id: int, db: Session = Depends(connect_db)):
