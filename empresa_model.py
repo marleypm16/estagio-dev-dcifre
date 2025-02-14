@@ -11,7 +11,7 @@ class Empresa(Base):
     email = Column(String)
     endereco = Column(String)
     telefone = Column(String)
-    obrigacoes = relationship("ObrigacaoAcessoria", back_populates="empresa")
+    obrigacoes = relationship("ObrigacaoAcessoria", back_populates="empresa",cascade="all, delete-orphan")
 
 
 
