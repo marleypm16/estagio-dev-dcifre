@@ -7,4 +7,12 @@ from config import settings
 database_url = settings.database_url
 engine = create_engine(database_url)
 
+
 Session = sessionmaker(bind=engine)
+
+def connect_db():
+    db = Session()
+    try:
+        yield db
+    finally:
+        db.close()
