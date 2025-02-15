@@ -60,11 +60,11 @@ A documentação interativa pode ser acessada em **`http://127.0.0.1:8000/docs`*
 ### 📝 Obrigações Acessórias
 | Método  | Rota                    | Descrição |
 |---------|--------------------------|-------------|
-| `POST`  | `/obrigacoes/`          | Criar uma obrigação |
-| `GET`   | `/obrigacoes/`          | Listar todas as obrigações |
-| `GET`   | `/obrigacoes/{id}`      | Obter detalhes de uma obrigação |
-| `PUT`   | `/obrigacoes/{id}`      | Atualizar uma obrigação |
-| `DELETE` | `/obrigacoes/{id}`      | Remover uma obrigação |
+| `POST`  | `/obrigacao-acessoria/`          | Criar uma obrigação |
+| `GET`   | `/obrigacao-acessoria/`          | Listar todas as obrigações |
+| `GET`   | `/obrigacao-acessoria/{id}`      | Obter detalhes de uma obrigação |
+| `PUT`   | `/obrigacao-acessoria/{id}`      | Atualizar uma obrigação |
+| `DELETE` | `/obrigacao-acessoria/{id}`      | Remover uma obrigação |
 
 ##  Testes Automatizados
 Para rodar os testes unitários:
